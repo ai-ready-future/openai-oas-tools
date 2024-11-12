@@ -1,0 +1,33 @@
+{
+  "name": "openai-swagger-tools",
+  "version": "0.0.1",
+  "description": "A Node.js library for seamless integration between OpenAI Client and Swagger APIs using OpenAI tools and functions.",
+  "main": "lib/index.js",
+  "scripts": {
+    "build": "tsc",  
+    "publish": "npm run build && npm publish", 
+    "test": "jest"
+  },
+  "dependencies": {
+    "axios": "^0.24.0",
+    "openai": "^3.0.0"
+  },
+  "keywords": [
+    "openai",
+    "swagger"
+  ],
+  "author": "Pilo",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ai-ready-future/openai-swagger-tools.git"
+  },
+  "devDependencies": {
+    "@types/axios": "^0.14.4",
+    "@types/jest": "^29.5.14",
+    "@types/node": "^22.9.0",
+    "jest": "^29.7.0",
+    "ts-jest": "^29.2.5",
+    "typescript": "^5.6.3"
+  }
+}
