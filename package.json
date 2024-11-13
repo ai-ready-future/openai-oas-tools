@@ -5,6 +5,7 @@
   "main": "lib/index.js",
   "scripts": {
     "build": "tsc",
+    "example": "npx ts-node examples/example.ts",
     "publish": "npm run build && npm publish",
     "test": "jest"
   },
