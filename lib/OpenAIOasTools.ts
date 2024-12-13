@@ -1,4 +1,7 @@
-export class OpenAISwaggerTools {
+import { APIRegistration } from "./APIRegistration";
+import { OpenAITool } from "./OpenAITool";
+
+export class OpenAIOasTools {
   apiRegistrations: any[] = [];
 
   constructor() {
@@ -11,12 +14,14 @@ export class OpenAISwaggerTools {
     return registration;
   }
 
-  getTools() {
-    const tools = [];
+  async getTools(): Promise<OpenAITool[]> {
 
-    this.apiRegistrations.forEach(registration => {
-      tools.push(...registration.convertToOpenAITools());
-    });
+    const tools: OpenAITool[] = [];
+
+    for (const registration of this.apiRegistrations) {
+      const extractedTools = await registration.convertToOpenAITools();
+      tools.push(...extractedTools);
+    }
 
     return tools;
   }

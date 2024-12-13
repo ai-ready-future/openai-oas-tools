@@ -47,7 +47,7 @@ export class APIRegistration {
       });
       return response.data;
     } catch (error) {
-      console.error(`Error fetching Swagger definition from ${this.apiUrl}:`, error);
+      console.error(`Error fetching Swagger definition from ${this.apiUrl}:`, (error as any).message);
       throw error;
     }
   }
